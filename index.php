@@ -24,28 +24,37 @@
     if(isset($_GET['menu'])) switch($_GET['menu']) {
         case 1:
 ?>
-    <div class="main-page">
-        <!--ACCUEIL--><p>accueil</p>
+    <div class="main-page-1">
+        <!--ACCUEIL-->
+        <div class="accueil-image"><img class="myself" src="ressources/images/myself.jpg"></div>
+        <div class="accueil-presentation">
+            <h3>Qui es-tu ?</h3>
+            <p>Je m'appelle Evan Froc et j'ai 23 ans.</p>
+            <h3>Que fais-tu ?</h3>
+            <p>Je suis actuellement en dernière année de Licence Informatique à l'Université de Rennes, 
+                et je suis activement à la recherche d'une alternance dans le cadre du master Ingénierie Logicielle
+                que je ferai l'année prochaine.</p>
+        </div>
     </div>
 <?php
             break;
         case 2:
 ?>
-    <div class="main-page">
+    <div class="main-page-2">
         <!--COMPETENCES--><p>competences</p>
     </div>
 <?php
             break;
         case 3:
 ?>
-    <div class="main-page">
+    <div class="main-page-3">
         <!--PROJETS--><p>projets</p>
     </div>
 <?php
             break;
         case 4:
 ?>
-    <div class="main-page">
+    <div class="main-page-4">
         <!--CONTACT--><p>contact</p>
     </div>
 <?php
