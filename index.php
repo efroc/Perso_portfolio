@@ -21,7 +21,8 @@
         </div>
     </header>
 <?php
-    if(isset($_GET['menu'])) switch($_GET['menu']) {
+    if(!isset($_GET['menu'])) $_GET['menu'] = 1;
+    switch($_GET['menu']) {
         case 1:
 ?>
     <div class="main-page-1">
