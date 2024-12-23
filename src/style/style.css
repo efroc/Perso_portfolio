@@ -110,16 +110,12 @@ a:visited {
 
 /*PARAM GENERAUX MAIN PAGE*/
 .main-page-1, .main-page-2, .main-page-3, .main-page-4 {
-    min-height: 70vh;
+    min-height: 75vh;
+    width: 100%;
+    display: flex;
 }
 
 /*MAIN-PAGE-1*/
-.main-page-1 {
-    display: flex;
-    width: 100%;
-    height: 100%;
-}
-
 .main-page-1 .accueil-image {
     display: flex;
     width: 50%;
@@ -159,8 +155,62 @@ a:visited {
 
 /*PARAM GENERAUX FOOTER*/
 footer {
-    margin-bottom: 10px;
-    min-height: 10vh;
-    width: 100%;      
+    display: flex;
+    height: 10vh;
+    width: 100%;    
 }
 
+footer div {
+    display: flex;
+    height: 100%;
+    width: 33%;
+}
+
+footer div > * {
+    margin: 0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+footer div > div {
+    width: 40%;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #d82d47;
+}
+
+footer div > p {
+    width: 60%;
+    justify-content: left;
+    font-size: 22px;
+}
+
+footer div:not(:first-child) {
+    border-left: 2px solid white;
+}
+
+/*
+footer ul {
+    margin: none;
+    padding: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: 2px solid red; 
+}
+
+footer ul li {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 33%;
+    height: 100%;
+    text-decoration: none;
+    justify-content: center;
+    border: 2px solid red; 
+
+}
+
+*/

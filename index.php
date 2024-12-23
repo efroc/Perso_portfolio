@@ -30,11 +30,15 @@
         <div class="accueil-image"><img class="myself" src="ressources/images/myself.jpg"></div>
         <div class="accueil-presentation">
             <h3>Qui es-tu ?</h3>
-            <p>Je m'appelle Evan Froc et j'ai 23 ans.</p>
-            <h3>Que fais-tu ?</h3>
-            <p>Je suis actuellement en dernière année de Licence Informatique à l'Université de Rennes, 
+            <p>Je m'appelle Evan Froc, j'ai 23 ans et je suis étudiant.</p>
+            <h3>Dans quel domaine ?</h3>
+            <p>Je suis actuellement en dernière année d'une Licence Informatique à l'Université de Rennes, 
                 et je suis activement à la recherche d'une alternance dans le cadre du master Ingénierie Logicielle
                 que je ferai l'année prochaine.</p>
+            <h3>Qu'aimes-tu faire en particulier ?</h3>
+            <p>Je suis passionné par le développement logiciel ET web. J'aime aussi me diversifier et 
+                apprendre de nouvelles choses. En fait j'aime l'idée, qu'avec une base solide en algorithmique,
+                on peut vraiment faire énormément de choses.</p>
         </div>
     </div>
 <?php
@@ -63,7 +67,18 @@
     }
 ?>
     <footer>
-        
+        <div>
+            <div>5+</div>
+            <p>Langages maitrisés</p>
+        </div>
+        <div>
+            <div>2</div>
+            <p>Projets réalisés en<br/> autonomie et en équipe</p>
+        </div>
+        <div>
+            <div>1</div>
+            <p>Expérience professionnelle</p>
+        </div>
     </footer>
 </body>
 </html>
