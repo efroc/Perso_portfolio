@@ -46,7 +46,26 @@
         case 2:
 ?>
     <div class="main-page-2">
-        <!--COMPETENCES--><p>competences</p>
+        <!--COMPETENCES-->
+        <div class="skills">
+            <h3>Maîtrise de langages :</h3>
+            <!--<div>Java
+                <div>4/5</div>
+            </div>
+            <div>PHP
+                <div>3/5</div>
+            </div>
+            <div>HTML
+                <div>4/5</div>
+            </div>
+            <div>MySQL
+                <div>4/5</div>
+            </div>-->
+        </div>
+        <div class="soft-skills">
+            <h3>Soft skills :</h3>
+            <p>autonomie, esprit d'équipe, esprit critique, curiosité</p>
+        </div>
     </div>
 <?php
             break;

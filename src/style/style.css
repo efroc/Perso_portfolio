@@ -142,10 +142,17 @@ a:visited {
 
 /*MAIN-PAGE-2*/
 .main-page-2 {
-    
+    justify-content: space-around;
 }
 
-.main-page-4 {
+.main-page-2 div {
+    border: 2px solid green;
+    height: 100%;
+    width: 40%;
+}
+
+/*MAIN-PAGE-3*/
+.main-page-3 {
     
 }
 
