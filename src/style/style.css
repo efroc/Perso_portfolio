@@ -11,6 +11,7 @@ body {
 
 aside {
     display: flex;
+    flex-direction: column;
     width: 20%;
     height: 100%;
     border: 2px solid green;
