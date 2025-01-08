@@ -1,20 +1,11 @@
-function showContent(section) {
-    const content = document.getElementById('content');
-    if(section === 'accueil') {
-        content.innerHTML = `
-            <p>accueil</p>
-        `;
-    } else if(section === 'competences') {
-        content.innerHTML = `
-            <p>competences</p>
-        `;
-    } else if(section === 'projets') {
-        content.innerHTML = `
-            <p>projets</p>
-        `;
-    } else {
-        content.innerHTML = `
-            <p>contact</p>
-        `;
-    }
+function showContent(contentId) {
+    // Cacher tous les contenus
+    var contents = document.querySelectorAll('.content');
+    contents.forEach(function(content) {
+        content.style.display = 'none';
+    });
+
+    // Afficher le contenu correspondant
+    var selectedContent = document.getElementById(contentId);
+    selectedContent.style.display = 'flex';
 }

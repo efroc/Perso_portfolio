@@ -23,6 +23,10 @@ main {
     height: 100%;
     border: 2px solid red;
 }
+
+div[id="content2"], div[id="content3"], div[id="content4"] {
+    display: none;
+}
 /*
 html, body {
     margin: 0;
