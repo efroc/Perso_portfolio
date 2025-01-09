@@ -13,15 +13,21 @@
     <!-- ===== Menu sur côté ===== -->
     <aside>
         <!-- ===== Titre ===== -->
-        <h2></h2>
+        <h2 class="titre">Portfolio</h2>
 
         <!-- ===== Menu liste ===== -->
         <ul class="menu">
-            <li><a href="#" onclick="showContent('content1')">Accueil</a></li>
-            <li><a href="#" onclick="showContent('content2')">Compétences</a></li>
-            <li><a href="#" onclick="showContent('content3')">Projets</a></li>
-            <li><a href="#" onclick="showContent('content4')">Contact</a></li>
+            <li><a href="#accueil" onclick="showContent('content1')"><p class="fr">Accueil</p><p class="en">Home</p></a></li>
+            <li><a href="#competences" onclick="showContent('content2')"><p class="fr">Compétences</p><p class="en">Skills</p></a></li>
+            <li><a href="#projets" onclick="showContent('content3')"><p class="fr">Projets</p><p class="en">Projects</p></a></li>
+            <li><a href="#contact" onclick="showContent('content4')">Contact</a></li>
         </ul>
+
+        <!-- ===== Bouton langue ===== -->
+        <div class="options">
+            <button id="language-button"><p class="fr">FR</p><p class="en">EN</p></button>
+        </div>
+
     </aside>
 
     <!-- ===== Contenu principal main ===== -->
@@ -39,7 +45,6 @@
             <p>contact</p>
         </div>
     </main>
-
 
     <!-- ===== JavaScript link file ===== -->
     <script src="src/js/script.js"></script>

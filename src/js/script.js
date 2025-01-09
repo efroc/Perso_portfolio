@@ -9,3 +9,20 @@ function showContent(contentId) {
     var selectedContent = document.getElementById(contentId);
     selectedContent.style.display = 'flex';
 }
+
+document.getElementById("language-button").addEventListener("click", function() {
+    // Sélectionner les éléments par leur classe
+    var frenchContent = document.querySelector(".fr");
+    var englishContent = document.querySelector(".en");
+  
+    // Basculer la visibilité des éléments
+    if (frenchParagraphs[0].style.display === 'none') {
+        // Afficher les éléments en français et cacher ceux en anglais
+        frenchContent.forEach(p => p.style.display = 'block');
+        englishContent.forEach(p => p.style.display = 'none');
+    } else {
+        // Afficher les éléments en anglais et cacher ceux en français
+        frenchContent.forEach(p => p.style.display = 'none');
+        englishContent.forEach(p => p.style.display = 'block');
+    }
+  });
