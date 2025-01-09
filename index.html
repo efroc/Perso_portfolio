@@ -7,25 +7,27 @@
     <!-- ===== Image icone ===== -->
     <link rel="icon" href="ressources/images/icon.jpeg" type="image/x-icon">
     <!-- ===== CSS link file ===== -->
-    <link rel="stylesheet" type="text/css" href="src/style/style.css">
+    <link rel="stylesheet" type="text/css" href="src/style/style.css?v=1.3">
 </head>
 <body>
     <!-- ===== Menu sur côté ===== -->
     <aside>
         <!-- ===== Titre ===== -->
-        <h2 class="titre">Portfolio</h2>
-
+         <div class="titre">
+            <h2>Portfolio</h2>
+         </div>
+        
         <!-- ===== Menu liste ===== -->
         <ul class="menu">
-            <li><a href="#accueil" onclick="showContent('content1')"><p class="fr">Accueil</p><p class="en">Home</p></a></li>
-            <li><a href="#competences" onclick="showContent('content2')"><p class="fr">Compétences</p><p class="en">Skills</p></a></li>
-            <li><a href="#projets" onclick="showContent('content3')"><p class="fr">Projets</p><p class="en">Projects</p></a></li>
+            <li><a href="#accueil" onclick="showContent('content1')"><span class="fr">Accueil</span><span class="en">Home</span></a></li>
+            <li><a href="#competences" onclick="showContent('content2')"><span class="fr">Compétences</span><span class="en">Skills</span></a></li>
+            <li><a href="#projets" onclick="showContent('content3')"><span class="fr">Projets</span><span class="en">Projects</span></a></li>
             <li><a href="#contact" onclick="showContent('content4')">Contact</a></li>
         </ul>
 
         <!-- ===== Bouton langue ===== -->
         <div class="options">
-            <button id="language-button"><p class="fr">FR</p><p class="en">EN</p></button>
+            <button id="language-button" class="language-button"><span class="fr">FR</span><span class="en">EN</span></button>
         </div>
 
     </aside>
@@ -47,6 +49,6 @@
     </main>
 
     <!-- ===== JavaScript link file ===== -->
-    <script src="src/js/script.js"></script>
+    <script src="src/js/script.js?v=1.3"></script>
 </body>
 </html>

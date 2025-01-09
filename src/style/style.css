@@ -1,4 +1,4 @@
-/***** PARAM GENERAUX *****/
+/***** ===== PARAM GENERAUX ====== *****/
 html, body {
     margin: 0;
     padding: 0;
@@ -8,35 +8,57 @@ html, body {
 
 body {
     display: flex;
+    font-family: sans-serif;;
 }
 
-p {
-    padding: 0;
-    margin: 0;
-    /*display: block;*/
-}
-
-.en {
-    display: none;
-}
-/***** MENU ASIDE *****/
+/***** ===== MENU ASIDE ===== *****/
 aside {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 20%;
     height: 100%;
 }
 
+/***** TITRE *****/
 .titre {
-    margin: 0;
-    padding: 0;
-    display: flex;
     width: 100%;
     height: 20%;
-    justify-content: center;    /*horizontal*/
-    align-items: center;        /*vertical*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.titre h2 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    width: 0; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    /*border: 2px solid black;*/
+    border: 3px solid black;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.05);
+    animation: 
+        typing 3.0s steps(40, end) forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 60%; 
+    }
+}
+
+/***** MENU *****/
 .menu {
     margin: 0;
     padding: 0;
@@ -55,24 +77,40 @@ aside {
 
 .menu li a {
     text-decoration: none;
+    color: black;
 }
 
+.menu li a:visited {
+    color: black;
+}
+
+span {
+    display: block;
+}
+
+.en {
+    display: none;
+}
+
+/***** OPTIONS *****/
 .options {
     margin: 0;
     padding: 0;
     display: flex;
     height: 30%;
     width: 100%;
-    border: 2px solid blue;
+    align-items: center;
+    justify-content: center;
 }
 
 .language-button {
     margin: 0;
     padding: 0;
-
+    height: 50px;
+    width: 60px;
 }
 
-/***** MAIN CONTENT *****/
+/***** ===== MAIN CONTENT ===== *****/
 main {
     display: flex;
     width: 80%;

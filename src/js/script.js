@@ -10,13 +10,14 @@ function showContent(contentId) {
     selectedContent.style.display = 'flex';
 }
 
+
 document.getElementById("language-button").addEventListener("click", function() {
     // Sélectionner les éléments par leur classe
-    var frenchContent = document.querySelector(".fr");
-    var englishContent = document.querySelector(".en");
+    var frenchContent = document.querySelectorAll(".fr");
+    var englishContent = document.querySelectorAll(".en");
   
     // Basculer la visibilité des éléments
-    if (frenchParagraphs[0].style.display === 'none') {
+    if (frenchContent[0].style.display === 'none') {
         // Afficher les éléments en français et cacher ceux en anglais
         frenchContent.forEach(p => p.style.display = 'block');
         englishContent.forEach(p => p.style.display = 'none');
@@ -25,4 +26,5 @@ document.getElementById("language-button").addEventListener("click", function() 
         frenchContent.forEach(p => p.style.display = 'none');
         englishContent.forEach(p => p.style.display = 'block');
     }
-  });
+});
+  
