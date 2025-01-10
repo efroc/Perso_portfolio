@@ -18,7 +18,9 @@ aside {
     justify-content: center;
     align-items: center;
     width: 20%;
+    min-width: 150px;
     height: 100%;
+    border-right: 1px solid black;
 }
 
 /***** TITRE *****/
@@ -38,7 +40,6 @@ aside {
     overflow: hidden;
     text-align: center;
     display: inline-block;
-    /*border: 2px solid black;*/
     border: 3px solid black;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -46,7 +47,7 @@ aside {
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.05);
     animation: 
-        typing 3.0s steps(40, end) forwards;
+        typing 2.0s steps(30, end) forwards;
 }
 
 @keyframes typing {
@@ -76,8 +77,28 @@ aside {
 }
 
 .menu li a {
+    display: inline-block;
+    position: relative;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
     color: black;
+}
+
+.menu li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;                 /* Épaisseur de la bordure */
+    background-color: #000;    /* Couleur de la bordure */
+    transition: width 0.5s ease; /* Animation de l'élargissement de la bordure */
+    transition-delay: 0.3s;      /* Délai avant le début de l'animation */
+}
+
+.menu li a:hover::before {
+    width: 100%;                 /* La bordure s'étend sur toute la largeur */
 }
 
 .menu li a:visited {
@@ -107,7 +128,15 @@ span {
     margin: 0;
     padding: 0;
     height: 50px;
-    width: 60px;
+    width: 100px;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.language-button:hover {
+    background-color: black;
+    color: white;
 }
 
 /***** ===== MAIN CONTENT ===== *****/
@@ -117,7 +146,11 @@ main {
     height: 100%;
 }
 
-/***** AFFICHAGE SELON MENU *****/
+div[id="content1"] {
+    
+}
+
+/***** ===== AFFICHAGE SELON MENU ===== *****/
 div[id="content2"], div[id="content3"], div[id="content4"] {
     display: none;
 }
