@@ -82,6 +82,7 @@ aside {
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
+    margin-left: 5px;
     color: black;
 }
 
@@ -132,11 +133,16 @@ span {
     background-color: white;
     border-radius: 10px;
     font-size: 18px;
+    transition: background-color 0.4s ease;
 }
 
 .language-button:hover {
     background-color: black;
     color: white;
+}
+
+.language-button:active {
+    transform: scale(0.95);
 }
 
 /***** ===== MAIN CONTENT ===== *****/
@@ -155,12 +161,18 @@ main {
     height: 85%;
 }
 
-div[id="content1"] > * {
+/***** ACCUEIL *****/
+div[id="content1"] > div {
     width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+div[id="content1"] .presentation > span {
+    height: 50%;
+    width: 90%;
 }
 
 div[id="content1"] div img {
@@ -170,7 +182,7 @@ div[id="content1"] div img {
    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
 }
 
-
+/***** *****/
 div[id="content2"] {
     
 }
