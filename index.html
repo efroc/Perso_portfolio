@@ -10,74 +10,36 @@
     <link rel="stylesheet" type="text/css" href="src/style/style.css?v=1.05">
 </head>
 <body>
-    <!-- ===== Menu sur côté ===== -->
-    <aside>
-        <!-- ===== Titre ===== -->
-         <div class="titre">
-            <h2>Portfolio</h2>
-         </div>
-        
-        <!-- ===== Menu liste ===== -->
-        <ul class="menu">
-            <li><img src="ressources/images/home-logo.png" height="22px"><a href="#accueil" onclick="showContent('content1')"><span class="fr">Accueil</span><span class="en">Home</span></a></li>
-            <li><img src="ressources/images/competences-logo.jpg" height="25px"><a href="#competences" onclick="showContent('content2')"><span class="fr">Compétences</span><span class="en">Skills</span></a></li>
-            <li><a href="#projets" onclick="showContent('content3')"><span class="fr">Projets</span><span class="en">Projects</span></a></li>
-            <li><a href="#contact" onclick="showContent('content4')">Contact</a></li>
-        </ul>
 
-        <!-- ===== Bouton langue ===== -->
-        <div class="options">
-            <button id="language-button" class="language-button"><span class="fr">FR</span><span class="en">EN</span></button>
-        </div>
+    <!-- ===== Menu ===== --->
+    <nav>
+        <a href="#apropos">À propos</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#contact">Contact</a>
+        <a href="ressources/CV Mon Master.pdf" download="CV_Evan_Froc">Télécharger le CV</a>
+    </nav>
 
-    </aside>
+    <!-- ===== Affichage selon menu ===== --->
+    <main>
+        <div id="content1">
 
-    <!-- ===== Contenu principal main ===== -->
-    <main id="content">
-        <div id="content1" class="content">
-            <div class="myself">
-                <img src="ressources/images/myself.jpg">
-            </div>
-            <div class="presentation">
-                <span class="fr">
-                    <h2>Qui es-tu ?</h2>
-                    <p>Je m'appelle Evan Froc, j'ai 23 ans et je suis étudiant à l'Université de Rennes.</p>
-                    <h2>Que fais-tu ?</h2>
-                    <p>Je suis en 3e année d'une Licence Informatique, 
-                        et je compte poursuivre mon cursus avec un Master Ingénierie Logicielle.</p>
-                    <h2>Qu'est-ce qui te plaît le plus en informatique ?</h2>
-                    <p>Je suis passionné par le développement logiciel et web. J'aime créer des interfaces web
-                        et pouvoir interagir avec des bases de données. J'aime l'idée qu'on peut créer énormément de 
-                        choses avec des bases solides en algorithmique.</p>
-                </span>
-                <span class="en">
-                    <h2>Who are you ?</h2>
-                    <p>I am Evan Froc, I'm 23 years old and I'm a student at the University of Rennes.</p>
-                    <h2>What do you study ?</h2>
-                    <p>I am in my third year of a Bachelor's degree in computer science, and I plan continuing
-                        my studies with a Master's degree in Software Engineering.</p>
-                    <h2>What do you like the most about computer science ?</h2>
-                    <p>I'm passionate about software and web development. I love creating 
-                        web interfaces and interacting with databases. I like the idea that you can 
-                        create a lot of things with a solid grounding in algorithms.</p>
-                </span>
-            </div>
         </div>
-        <div id="content2" class="content">
-            <p>competences</p>
+        <div id="content2">
+
         </div>
-        <div id="content3" class="content">
-            <p>projets</p>
+        <div id="content3">
+
         </div>
-        <div id="content4" class="content">
-            <p>contact</p>
-        </div>
-        <div class="permanent-content">
-            <div>blabla</div>
-            <div>blabla</div>
-            <div>blabla</div>
+        <div id="content4">
+
         </div>
     </main>
+
+    <!-- ===== Footer droits ===== --->
+    <footer>
+        <p>© Evan Froc 2025 - Tous droits réservés</p>
+    </footer>
 
     <!-- ===== JavaScript link file ===== -->
     <script src="src/js/script.js?v=1.05"></script>

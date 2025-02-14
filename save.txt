@@ -1,0 +1,523 @@
+##################### HTML #######################
+
+<!-- ===== Menu sur côté ===== -->
+    <aside>
+        <!-- ===== Titre ===== -->
+         <div class="titre">
+            <h2>Portfolio</h2>
+         </div>
+        
+        <!-- ===== Menu liste ===== -->
+        <ul class="menu">
+            <li><img src="ressources/images/home-logo.png" height="22px"><a href="#accueil" onclick="showContent('content1')"><span class="fr">Accueil</span><span class="en">Home</span></a></li>
+            <li><img src="ressources/images/competences-logo.jpg" height="25px"><a href="#competences" onclick="showContent('content2')"><span class="fr">Compétences</span><span class="en">Skills</span></a></li>
+            <li><a href="#projets" onclick="showContent('content3')"><span class="fr">Projets</span><span class="en">Projects</span></a></li>
+            <li><a href="#contact" onclick="showContent('content4')">Contact</a></li>
+        </ul>
+
+        <!-- ===== Bouton langue ===== -->
+        <div class="options">
+            <button id="language-button" class="language-button"><span class="fr">FR</span><span class="en">EN</span></button>
+        </div>
+
+    </aside>
+
+    <!-- ===== Contenu principal main ===== -->
+    <main id="content">
+        <div id="content1" class="content">
+            <div class="myself">
+                <img src="ressources/images/myself.jpg">
+            </div>
+            <div class="presentation">
+                <span class="fr">
+                    <h2>Qui es-tu ?</h2>
+                    <p>Je m'appelle Evan Froc, j'ai 23 ans et je suis étudiant à l'Université de Rennes.</p>
+                    <h2>Que fais-tu ?</h2>
+                    <p>Je suis en 3e année d'une Licence Informatique, 
+                        et je compte poursuivre mon cursus avec un Master Ingénierie Logicielle.</p>
+                    <h2>Qu'est-ce qui te plaît le plus en informatique ?</h2>
+                    <p>Je suis passionné par le développement logiciel et web. J'aime créer des interfaces web
+                        et pouvoir interagir avec des bases de données. J'aime l'idée qu'on peut créer énormément de 
+                        choses avec des bases solides en algorithmique.</p>
+                </span>
+                <span class="en">
+                    <h2>Who are you ?</h2>
+                    <p>I am Evan Froc, I'm 23 years old and I'm a student at the University of Rennes.</p>
+                    <h2>What do you study ?</h2>
+                    <p>I am in my third year of a Bachelor's degree in computer science, and I plan continuing
+                        my studies with a Master's degree in Software Engineering.</p>
+                    <h2>What do you like the most about computer science ?</h2>
+                    <p>I'm passionate about software and web development. I love creating 
+                        web interfaces and interacting with databases. I like the idea that you can 
+                        create a lot of things with a solid grounding in algorithms.</p>
+                </span>
+            </div>
+        </div>
+        <div id="content2" class="content">
+            <p>competences</p>
+        </div>
+        <div id="content3" class="content">
+            <p>projets</p>
+        </div>
+        <div id="content4" class="content">
+            <p>contact</p>
+        </div>
+        <div class="permanent-content">
+            <div>blabla</div>
+            <div>blabla</div>
+            <div>blabla</div>
+        </div>
+    </main>
+
+##################### CSS ###################
+
+/***** ===== PARAM GENERAUX ====== *****/
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    font-family: sans-serif;;
+}
+
+/***** ===== MENU ASIDE ===== *****/
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    min-width: 150px;
+    height: 100%;
+    border-right: 1px solid black;
+}
+
+/***** TITRE *****/
+.titre {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titre h2 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    width: 0; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    display: inline-block;
+    border: 3px solid black;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.05);
+    animation: 
+        typing 2.0s steps(30, end) forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 60%; 
+    }
+}
+
+/***** MENU *****/
+.menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    height: 50%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+
+.menu li {
+    display: flex;
+}
+
+.menu li a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 5px;
+    color: black;
+}
+
+.menu li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;                 /* Épaisseur de la bordure */
+    background-color: #000;    /* Couleur de la bordure */
+    transition: width 0.5s ease; /* Animation de l'élargissement de la bordure */
+    transition-delay: 0.3s;      /* Délai avant le début de l'animation */
+}
+
+.menu li a:hover::before {
+    width: 100%;                 /* La bordure s'étend sur toute la largeur */
+}
+
+.menu li a:visited {
+    color: black;
+}
+
+span {
+    display: block;
+}
+
+.en {
+    display: none;
+}
+
+/***** OPTIONS *****/
+.options {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 30%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.language-button {
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    width: 100px;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: background-color 0.4s ease;
+}
+
+.language-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.language-button:active {
+    transform: scale(0.95);
+}
+
+/***** ===== MAIN CONTENT ===== *****/
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    height: 85%;
+}
+
+/***** ACCUEIL *****/
+div[id="content1"] > div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div[id="content1"] .presentation > span {
+    height: 50%;
+    width: 90%;
+}
+
+div[id="content1"] div img {
+   height: 400px;
+   border-radius: 50%;
+   mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%); /* Masque dégradé */
+   -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+}
+
+/***** *****/
+div[id="content2"] {
+    
+}
+
+div[id="content3"] {
+    
+}
+
+div[id="content4"] {
+    
+}
+
+.permanent-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+}
+
+.permanent-content div {
+    display: flex;
+    width: 33%;
+    height: 80%;
+}
+
+.permanent-content div:not(:last-child){
+    border-right: 1px solid black;
+}
+
+/***** ===== AFFICHAGE SELON MENU ===== *****/
+div[id="content2"], div[id="content3"], div[id="content4"] {
+    display: none;
+}
+
+
+
+
+
+
+
+/*
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;               
+    flex-direction: column;      
+    background-color: #101357; 
+    color: white;              
+}
+
+header {
+    width: 100%;
+    height: 10vh;  
+    display: flex;
+    align-items: center;
+}
+
+.titre {
+    width: 20%;
+    text-align: center;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: auto;
+    margin: 0 auto;
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 20% }
+}
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+}
+
+.head-menu {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+
+li a::after {
+    content: '';
+    transform-origin: 0 0; 
+    transform: scaleX(0);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: .1em; 
+    background: white;
+    z-index: -1;
+    transition: transform .3s;
+}
+
+li a:hover::after {
+    transform: scaleX(1);
+}
+  
+a:visited {
+    color: white;
+}
+
+.download-cv {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.download-cv a {
+    background-color: #d82d47;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.download-cv a:hover {
+    transform: scale(1.05);
+}
+
+.main-page-1, .main-page-2, .main-page-3, .main-page-4 {
+    min-height: 75vh;
+    width: 100%;
+    display: flex;
+}
+
+.main-page-1 .accueil-image {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center; 
+    align-items: center;    
+}
+
+.myself {
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px #3d4088;
+}
+
+.main-page-1 .accueil-presentation {
+    display: flex;
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: end;
+}
+
+
+.main-page-2 {
+    justify-content: space-around;
+}
+
+.main-page-2 div {
+    border: 2px solid green;
+    height: 100%;
+    width: 40%;
+}
+
+.main-page-3 {
+    
+}
+
+.main-page-4 {
+    
+}
+
+footer {
+    display: flex;
+    height: 10vh;
+    width: 100%;    
+}
+
+footer div {
+    display: flex;
+    height: 100%;
+    width: 33%;
+}
+
+footer div > * {
+    margin: 0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+footer div > div {
+    width: 40%;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #d82d47;
+}
+
+footer div > p {
+    width: 60%;
+    justify-content: left;
+    font-size: 22px;
+}
+
+footer div:not(:first-child) {
+    border-left: 2px solid white;
+}
+*/
+
+#################### JS #########################
+
+function showContent(contentId) {
+    // Cacher tous les contenus
+    var contents = document.querySelectorAll('.content');
+    contents.forEach(function(content) {
+        content.style.display = 'none';
+    });
+
+    // Afficher le contenu correspondant
+    var selectedContent = document.getElementById(contentId);
+    selectedContent.style.display = 'flex';
+}
+
+
+document.getElementById("language-button").addEventListener("click", function() {
+    // Sélectionner les éléments par leur classe
+    var frenchContent = document.querySelectorAll(".fr");
+    var englishContent = document.querySelectorAll(".en");
+  
+    // Basculer la visibilité des éléments
+    if (frenchContent[0].style.display === 'none') {
+        // Afficher les éléments en français et cacher ceux en anglais
+        frenchContent.forEach(p => p.style.display = 'block');
+        englishContent.forEach(p => p.style.display = 'none');
+    } else {
+        // Afficher les éléments en anglais et cacher ceux en français
+        frenchContent.forEach(p => p.style.display = 'none');
+        englishContent.forEach(p => p.style.display = 'block');
+    }
+});
+  
