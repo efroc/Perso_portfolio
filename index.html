@@ -3,36 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ===== Titre ===== --->
     <title>Portfolio d'Evan Froc</title>
     <!-- ===== Image icone ===== -->
     <link rel="icon" href="ressources/images/icon.jpeg" type="image/x-icon">
     <!-- ===== CSS link file ===== -->
-    <link rel="stylesheet" type="text/css" href="src/style/style.css?v=1.05">
+    <link rel="stylesheet" type="text/css" href="src/style/style.css?v=1.1">
 </head>
 <body>
 
     <!-- ===== Menu ===== --->
     <nav>
-        <a href="#apropos">À propos</a>
-        <a href="#competences">Compétences</a>
-        <a href="#projets">Projets</a>
-        <a href="#contact">Contact</a>
-        <a href="ressources/CV Mon Master.pdf" download="CV_Evan_Froc">Télécharger le CV</a>
+        <a href="#apropos" onclick="showContent('content1')">À propos</a>
+        <a href="#competences" onclick="showContent('content2')">Compétences</a>
+        <a href="#projets" onclick="showContent('content3')">Projets</a>
+        <a href="#contact" onclick="showContent('content4')">Contact</a>
+        <a href="ressources/CV_Evan_Froc.pdf" target="_blank">Visualiser le CV</a>
     </nav>
 
     <!-- ===== Affichage selon menu ===== --->
-    <main>
-        <div id="content1">
-
+    <main id="content">
+        <div id="content1" class="content">
+            <div class="myself">
+                <img src="ressources/images/myself.jpg">
+            </div>
+            <div class="presentation">
+                <h3>Qui es-tu ?</h3>
+                <span>Je m'appelle Evan Froc et j'ai 23 ans.<br/>
+                    Je suis étudiant en 3e année d'une Licence Informatique à l'Université de Rennes. Je suis passionné par 
+                    le développement web et logiciel et je compte poursuivre mon parcours avec un Master Ingénierie Logicielle.
+                </span>
+                <h3>Que recherche-tu ?</h3>
+                <span>Je recherche une alternance d'une durée d'au moins 1 an, à partir de la rentrée 2025.
+                    Cela me permettra d'appliquer mes connaissances apprises en cours sur des projets concrets, mais aussi de découvrir 
+                    un nouvel environnement de travail.
+                </span>
+            </div>
         </div>
-        <div id="content2">
-
+        <div id="content2" class="content">
+            competences
         </div>
-        <div id="content3">
-
+        <div id="content3" class="content">
+            <a href="#precedent" onclick="showProject()">&lt;</a>
+            <div>
+                
+            </div>
+            <a href="#suivant" onclick="showProject()">&gt;</a>
         </div>
-        <div id="content4">
-
+        <div id="content4" class="content">
+            contact
         </div>
     </main>
 
@@ -42,6 +61,6 @@
     </footer>
 
     <!-- ===== JavaScript link file ===== -->
-    <script src="src/js/script.js?v=1.05"></script>
+    <script src="src/js/script.js"></script>
 </body>
 </html>
