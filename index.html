@@ -23,6 +23,8 @@
 
     <!-- ===== Affichage selon menu ===== --->
     <main id="content">
+
+        <!-- ===== A propos ===== --->
         <div id="content1" class="content">
             <div class="myself">
                 <img src="ressources/images/myself.jpg">
@@ -30,19 +32,24 @@
             <div class="presentation">
                 <h3>Qui es-tu ?</h3>
                 <span>Je m'appelle Evan Froc et j'ai 23 ans.<br/>
-                    Je suis étudiant en 3e année d'une Licence Informatique à l'Université de Rennes. Je suis passionné par 
+                    Je suis étudiant en 3<sup>e</sup> année d'une Licence Informatique à l'Université de Rennes. Je suis passionné par 
                     le développement web et logiciel et je compte poursuivre mon parcours avec un Master Ingénierie Logicielle.
                 </span>
-                <h3>Que recherche-tu ?</h3>
+                <h3>Que recherches-tu ?</h3>
                 <span>Je recherche une alternance d'une durée d'au moins 1 an, à partir de la rentrée 2025.
                     Cela me permettra d'appliquer mes connaissances apprises en cours sur des projets concrets, mais aussi de découvrir 
                     un nouvel environnement de travail.
                 </span>
+                <button onclick="showContent('content2')" class="button-presentation">Mes compétences</button>
             </div>
         </div>
+
+        <!-- ===== Competences ===== --->
         <div id="content2" class="content">
             competences
         </div>
+
+        <!-- ===== Projets ===== --->
         <div id="content3" class="content">
             <a href="#precedent" onclick="showProject()">&lt;</a>
             <div>
@@ -50,9 +57,12 @@
             </div>
             <a href="#suivant" onclick="showProject()">&gt;</a>
         </div>
+
+        <!-- ===== Contact ===== --->
         <div id="content4" class="content">
             contact
         </div>
+        
     </main>
 
     <!-- ===== Footer droits ===== --->
